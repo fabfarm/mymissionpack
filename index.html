@@ -3,12 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Mission Pack</title>
+    <title>Server Documentation - Links and Credentials</title>
 </head>
 <body>
-    <h1>My Mission Pack index</h1>
+    <h1>Server Documentation</h1>
+    <p>IP Address: <strong>192.168.1.243</strong></p>
+
+    <h2>Services and Links</h2>
     <ul>
-        <li><a href="missionpack.html">missionpack.html</a></li>
+        <li>
+            <p><strong>SSH Server</strong><br>
+            <code>ssh recomputer@192.168.1.243</code><br>
+            <strong>Default Username:</strong> root<br>
+            <strong>Default Password:</strong> Set during setup<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/SSH_Server_Setup/" target="_blank">SSH Setup Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:631/" target="_blank">CUPS Scheduler</a>
+            <p><strong>Default Username:</strong> admin<br>
+            <strong>Default Password:</strong> Set during setup<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/CUPS_Setup/" target="_blank">CUPS Setup Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:1880/" target="_blank">Mission Pack - SenseCraft Node-RED</a>
+            <p><strong>Default Username:</strong> admin<br>
+            <strong>Default Password:</strong> admin<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/" target="_blank">Node-RED Guide</a></p>
+        </li>
+        <li>
+            <p><strong>MQTT Broker</strong><br>
+            MQTT service typically accessed via clients.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/" target="_blank">MQTT Setup Guide</a></p>
+        </li>
+        <li>
+            <p><strong>PostgreSQL Database</strong><br>
+            Access via command-line or applications using connection string.<br>
+            <strong>Default Username:</strong> postgres<br>
+            <strong>Default Password:</strong> Set during setup<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/PostgreSQL_Setup/" target="_blank">PostgreSQL Setup Guide</a></p>
+        </li>
+        <li>
+            <p><strong>LoRa Gateway Bridge</strong><br>
+            Typically configured via ChirpStack or a similar platform.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">LoRa Gateway Documentation</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:8080/" target="_blank">ChirpStack Application Server</a>
+            <p><strong>Default Username:</strong> admin<br>
+            <strong>Default Password:</strong> admin<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:3001/" target="_blank">ChirpStack Gateway Bridge Basic Station</a>
+            <p><strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack Basic Station Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:8090/" target="_blank">ChirpStack REST API</a>
+            <p><strong>Default Username:</strong> admin<br>
+            <strong>Default Password:</strong> admin<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack API Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:8091/" target="_blank">Node-RED File Manager</a>
+            <p><strong>Default Username:</strong> admin<br>
+            <strong>Default Password:</strong> admin<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Node-RED File Manager Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:8092/" target="_blank">Node-RED Static File Server</a>
+            <p><strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Static File Server Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:8000/" target="_blank">PySSCMA Server</a>
+            <p><strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/pysscma" target="_blank">PySSCMA Guide</a></p>
+        </li>
+        <li>
+            <a href="http://192.168.1.243:5900/" target="_blank">VNC Server</a>
+            <p><strong>Default Username:</strong> Set during setup<br>
+            <strong>Default Password:</strong> Set during setup<br>
+            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/VNC_Server_Setup/" target="_blank">VNC Setup Guide</a></p>
+        </li>
+        <li>
+            <p><strong>Media Server (mediamtx)</strong><br>
+            Accessible via streaming configurations in client applications.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Media Server Guide</a></p>
+        </li>
+        <li>
+            <p><strong>Media Server RTSP (mediamtx)</strong><br>
+            Accessible via RTSP URL in client applications.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">RTSP Streaming Guide</a></p>
+        </li>
+        <li>
+            <p><strong>Media Server HTTP (mediamtx)</strong><br>
+            Accessible via HTTP streaming configurations.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">HTTP Streaming Guide</a></p>
+        </li>
+        <li>
+            <p><strong>Media Server HTTPS (mediamtx)</strong><br>
+            Accessible via HTTPS streaming configurations.<br>
+            <strong>Default Username:</strong> Not required<br>
+            <strong>Default Password:</strong> Not required<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">HTTPS Streaming Guide</a></p>
+        </li>
+        <li>
+            <p><strong>Supervisor Service</strong><br>
+            Manage services via Supervisor's configuration interface or CLI.<br>
+            <strong>Default Username:</strong> Set during setup<br>
+            <strong>Default Password:</strong> Set during setup<br>
+            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Supervisor Service Guide</a></p>
+        </li>
     </ul>
 </body>
 </html>
