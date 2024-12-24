@@ -3,182 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Server Documentation - Links and Credentials</title>
+    <title>Mission Pack Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background: #0078D7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+        }
+        a {
+            color: #0078D7;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h1>Server Documentation</h1>
-    <p>IP Address: <strong>192.168.1.243</strong></p>
-
-    <h2>Services and Links</h2>
-    <ul>
-        <li>
-            <p><strong>SSH Server</strong><br>
-            <code>ssh recomputer@192.168.1.243</code><br>
-            <strong>Default Username:</strong> recomputer<br>
-            <strong>Default Password:</strong> 12345678<br>
-            <strong>Port:</strong> 22<br>
-            <strong>Docker Name:</strong> Not applicable<br>
-            <strong>Service Name:</strong> OpenSSH<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/SSH_Server_Setup/" target="_blank">SSH Setup Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:631/" target="_blank">CUPS Scheduler</a>
-            <p><strong>Default Username:</strong> admin<br>
-            <strong>Default Password:</strong> Set during setup<br>
-            <strong>Port:</strong> 631<br>
-            <strong>Docker Name:</strong> Not applicable<br>
-            <strong>Service Name:</strong> CUPS Scheduler<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/CUPS_Setup/" target="_blank">CUPS Setup Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:1880/" target="_blank">Mission Pack - SenseCraft Node-RED</a>
-            <p><strong>Default Username:</strong> admin<br>
-            <strong>Default Password:</strong> admin<br>
-            <strong>Port:</strong> 1880<br>
-            <strong>Docker Name:</strong> sensecraft-nodered<br>
-            <strong>Service Name:</strong> Node-RED<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/" target="_blank">Node-RED Guide</a></p>
-        </li>
-        <li>
-            <p><strong>MQTT Broker</strong><br>
-            MQTT service typically accessed via clients.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 1883<br>
-            <strong>Docker Name:</strong> sensecraft-devices-mqtt-broker<br>
-            <strong>Service Name:</strong> Mosquitto MQTT<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/" target="_blank">MQTT Setup Guide</a></p>
-        </li>
-        <li>
-            <p><strong>PostgreSQL Database</strong><br>
-            Access via command-line or applications using connection string.<br>
-            <strong>Default Username:</strong> postgres<br>
-            <strong>Default Password:</strong> Set during setup<br>
-            <strong>Port:</strong> 5432<br>
-            <strong>Docker Name:</strong> sensecraft-chirpstack-postgres<br>
-            <strong>Service Name:</strong> PostgreSQL<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/PostgreSQL_Setup/" target="_blank">PostgreSQL Setup Guide</a></p>
-        </li>
-        <li>
-            <p><strong>LoRa Gateway Bridge</strong><br>
-            Typically configured via ChirpStack or a similar platform.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 1700<br>
-            <strong>Docker Name:</strong> sensecraft-chirpstack-gateway-bridge<br>
-            <strong>Service Name:</strong> LoRa Gateway Bridge<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">LoRa Gateway Documentation</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:8080/" target="_blank">ChirpStack Application Server</a>
-            <p><strong>Default Username:</strong> admin<br>
-            <strong>Default Password:</strong> admin<br>
-            <strong>Port:</strong> 8080<br>
-            <strong>Docker Name:</strong> sensecraft-chirpstack<br>
-            <strong>Service Name:</strong> ChirpStack Application Server<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:3001/" target="_blank">ChirpStack Gateway Bridge Basic Station</a>
-            <p><strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 3001<br>
-            <strong>Docker Name:</strong> sensecraft-chirpstack-gateway-bridge-basicstation<br>
-            <strong>Service Name:</strong> ChirpStack Gateway Bridge<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack Basic Station Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:8090/" target="_blank">ChirpStack REST API</a>
-            <p><strong>Default Username:</strong> admin<br>
-            <strong>Default Password:</strong> admin<br>
-            <strong>Port:</strong> 8090<br>
-            <strong>Docker Name:</strong> sensecraft-chirpstack-rest-api<br>
-            <strong>Service Name:</strong> ChirpStack REST API<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">ChirpStack API Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:8091/" target="_blank">Node-RED File Manager</a>
-            <p><strong>Default Username:</strong> admin<br>
-            <strong>Default Password:</strong> admin<br>
-            <strong>Port:</strong> 8091<br>
-            <strong>Docker Name:</strong> sensecraft-nodered-filemanager<br>
-            <strong>Service Name:</strong> Node-RED File Manager<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Node-RED File Manager Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:8092/" target="_blank">Node-RED Static File Server</a>
-            <p><strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 8092<br>
-            <strong>Docker Name:</strong> sensecraft-nodered-static-file-server<br>
-            <strong>Service Name:</strong> Node-RED Static File Server<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Static File Server Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:8000/" target="_blank">PySSCMA Server</a>
-            <p><strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 8000<br>
-            <strong>Docker Name:</strong> sensecraft-pysscma-server<br>
-            <strong>Service Name:</strong> PySSCMA<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/pysscma" target="_blank">PySSCMA Guide</a></p>
-        </li>
-        <li>
-            <a href="http://192.168.1.243:5900/" target="_blank">VNC Server</a>
-            <p><strong>Default Username:</strong> Set during setup<br>
-            <strong>Default Password:</strong> Set during setup<br>
-            <strong>Port:</strong> 5900<br>
-            <strong>Docker Name:</strong> Not applicable<br>
-            <strong>Service Name:</strong> VNC Server<br>
-            <strong>Seeed Documentation:</strong> <a href="https://wiki.seeedstudio.com/VNC_Server_Setup/" target="_blank">VNC Setup Guide</a></p>
-        </li>
-        <li>
-            <p><strong>Media Server (mediamtx)</strong><br>
-            Accessible via streaming configurations in client applications.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Media Server Guide</a></p>
-        </li>
-        <li>
-            <p><strong>Media Server RTSP (mediamtx)</strong><br>
-            Accessible via RTSP URL in client applications.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">RTSP Streaming Guide</a></p>
-        </li>
-        <li>
-            <p><strong>Media Server HTTP (mediamtx)</strong><br>
-            Accessible via HTTP streaming configurations.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">HTTP Streaming Guide</a></p>
-        </li>
-        <li>
-            <p><strong>Media Server (mediamtx)</strong><br>
-            Accessible via streaming configurations in client applications.<br>
-            <strong>Default Username:</strong> Not required<br>
-            <strong>Default Password:</strong> Not required<br>
-            <strong>Port:</strong> 1935<br>
-            <strong>Docker Name:</strong> sensecraft-media-server<br>
-            <strong>Service Name:</strong> Media Server (mediamtx)<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Media Server Guide</a></p>
-        </li>
-        <li>
-            <p><strong>Supervisor Service</strong><br>
-            Manage services via Supervisor's configuration interface or CLI.<br>
-            <strong>Default Username:</strong> Set during setup<br>
-            <strong>Default Password:</strong> Set during setup<br>
-            <strong>Port:</strong> 46657<br>
-            <strong>Docker Name:</strong> sensecraft-supervisor<br>
-            <strong>Service Name:</strong> Supervisor Service<br>
-            <strong>Seeed Documentation:</strong> <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">Supervisor Service Guide</a></p>
-        </li>
-    </ul>
-
+    <header>
+        <h1>Seeed Studio Mission Pack - Documentation</h1>
+    </header>
+    <main>
+        <p>Welcome to the documentation hub for the Seeed Studio Mission Pack, deployed on the <strong>Algarve FabFarm</strong> infrastructure. This documentation serves as a detailed guide to understanding, configuring, and utilizing the services and tools provided within the Mission Pack.</p>
+        <p>The Hazard Response Mission Pack is an open-source AIoT solution designed to efficiently manage and mitigate hazard scenarios. This compact system combines a range of technologies, including sensor networks and edge computing, to enable effective remote sensing, data transmission, processing, inference, and analysis. For more detailed information about the Hazard Response Mission Pack, please refer to the <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">official GitHub repository</a>.</p>
+        <p>Below, you'll find links to detailed documentation for each service included in the Mission Pack:</p>
+        <ul>
+            <li><a href="ssh_server.html">SSH Server</a> - Securely access the server terminal remotely.</li>
+            <li><a href="cups_scheduler.html">CUPS Scheduler</a> - Manage and configure print jobs.</li>
+            <li><a href="node_red.html">Node-RED</a> - Visual programming for IoT workflows.</li>
+            <li><a href="mqtt_broker.html">MQTT Broker</a> - Message broker for IoT communication.</li>
+            <li><a href="postgresql.html">PostgreSQL Database</a> - Database for data storage and management.</li>
+            <li><a href="lora_gateway.html">LoRa Gateway Bridge</a> - Connect LoRa devices to the network.</li>
+            <li><a href="chirpstack.html">ChirpStack Application Server</a> - Manage LoRaWAN networks and applications.</li>
+            <li><a href="mediamtx.html">Media Server</a> - Stream and manage media files.</li>
+            <li><a href="supervisor.html">Supervisor Service</a> - Monitor and control server processes.</li>
+            <li><a href="general.html">General Information</a> - Overview of the Mission Pack and its components.</li>
+        </ul>
+    </main>
     <footer>
-        <p>This website is a documentation of my progress exploring Seeed Studio's Mission Pack and its application at Algarve Fabfarm. For more information, visit <a href="https://www.seeedstudio.com" target="_blank">Seeed Studio</a> and <a href="https://www.fabfarm.org" target="_blank">Algarve Fabfarm</a>.</p>
-        <p>If you find any errors or have suggestions for improvements, please send them to <a href="mailto:info@fabfarm.org">info@fabfarm.org</a>.</p>
+        <p>This documentation is maintained by Algarve FabFarm. For more details, visit <a href="https://www.seeedstudio.com" target="_blank">Seeed Studio</a> or contact <a href="mailto:info@fabfarm.org">info@fabfarm.org</a>.</p>
     </footer>
 </body>
 </html>
-
