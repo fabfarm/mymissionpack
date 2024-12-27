@@ -3,99 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reComputer Interfaces</title>
     <link rel="stylesheet" href="styles.css">
-    <title>reComputer Interfaces and Communication Walkthrough</title>
 </head>
 <body>
-    <h1>reComputer Interfaces and Communication Walkthrough</h1>
+    <header>
+        <h1>reComputer Interfaces and Communication Walkthrough</h1>
+    </header>
+    <main>
+        <section>
+            <p>This document provides a technical overview of the communication interfaces available on the reComputer. The aim is to enumerate all hardware and network interfaces for better understanding and configuration.</p>
+        </section>
 
-    <h2>Introduction</h2>
-    <p>This document provides a technical overview of the communication interfaces available on the reComputer, based on the outputs of various Linux commands. The aim is to enumerate all hardware and network interfaces for better understanding and configuration.</p>
+        <section>
+            <h2>1. Storage Interfaces</h2>
+            <p><strong>Command:</strong> <code>lsblk -f</code></p>
+            <p>The storage configuration includes:</p>
+            <ul>
+                <li><strong>bootfs:</strong> FAT32 partition mounted at <code>/boot/firmware</code>.</li>
+                <li><strong>rootfs:</strong> ext4 partition mounted at <code>/</code>.</li>
+            </ul>
+        </section>
 
-    <h2>1. Storage Interfaces</h2>
-    <p><strong>Command:</strong> <code>lsblk -f</code></p>
-    <p>The storage configuration includes:</p>
-    <ul>
-        <li><strong>bootfs:</strong> FAT32 partition mounted at <code>/boot/firmware</code>.</li>
-        <li><strong>rootfs:</strong> ext4 partition mounted at <code>/</code>.</li>
-    </ul>
+        <section>
+            <h2>2. PCI Devices</h2>
+            <p><strong>Command:</strong> <code>lspci</code></p>
+            <p>No PCI devices were listed on this system.</p>
+        </section>
 
-    <h2>2. PCI Devices</h2>
-    <p><strong>Command:</strong> <code>lspci</code></p>
-    <p>No PCI devices were listed on this system.</p>
+        <section>
+            <h2>3. USB Devices</h2>
+            <p><strong>Command:</strong> <code>lsusb</code></p>
+            <p>Detected USB devices:</p>
+            <ul>
+                <li>Wireless mini keyboard with touchpad (ID: 1997:2433).</li>
+                <li>USB 2.0 Hub and Ethernet adapter from Microchip Technology.</li>
+                <li>Root USB hub by Linux Foundation.</li>
+            </ul>
+        </section>
 
-    <h2>3. USB Devices</h2>
-    <p><strong>Command:</strong> <code>lsusb</code></p>
-    <p>Detected USB devices:</p>
-    <ul>
-        <li>Wireless mini keyboard with touchpad (ID: 1997:2433).</li>
-        <li>USB 2.0 Hub and Ethernet adapter from Microchip Technology.</li>
-        <li>Root USB hub by Linux Foundation.</li>
-    </ul>
+        <section>
+            <h2>4. Network Interfaces</h2>
+            <p><strong>Command:</strong> <code>ip link show</code></p>
+            <p>Available network interfaces:</p>
+            <ul>
+                <li><strong>eth0:</strong> Ethernet interface with a MAC address of <code>d8:3a:dd:ac:18:00</code>.</li>
+                <li><strong>eth1:</strong> Ethernet interface via USB hub with a MAC address of <code>2c:f7:f1:21:11:9b</code>.</li>
+                <li><strong>wlan0:</strong> Wireless interface, currently down.</li>
+                <li>Multiple Docker and bridge interfaces.</li>
+            </ul>
+        </section>
 
-    <h2>4. Network Interfaces</h2>
-    <p><strong>Command:</strong> <code>ip link show</code></p>
-    <p>Available network interfaces:</p>
-    <ul>
-        <li><strong>eth0:</strong> Ethernet interface with a MAC address of <code>d8:3a:dd:ac:18:00</code>.</li>
-        <li><strong>eth1:</strong> Ethernet interface via USB hub with a MAC address of <code>2c:f7:f1:21:11:9b</code>.</li>
-        <li><strong>wlan0:</strong> Wireless interface, currently down.</li>
-        <li>Multiple Docker and bridge interfaces.</li>
-    </ul>
+        <section>
+            <h2>5. Serial Interfaces</h2>
+            <p><strong>Commands:</strong></p>
+            <ul>
+                <li><code>dmesg | grep -i "tty"</code></li>
+                <li><code>ls /dev/tty*</code></li>
+            </ul>
+            <p>Detected serial devices:</p>
+            <ul>
+                <li><code>/dev/ttyAMA1</code>, <code>/dev/ttyAMA2</code>, <code>/dev/ttyAMA3</code>, and others.</li>
+                <li><code>/dev/ttyS0</code> is enabled as a console interface.</li>
+            </ul>
+        </section>
 
-    <h2>5. Serial Interfaces</h2>
-    <p><strong>Commands:</strong></p>
-    <ul>
-        <li><code>dmesg | grep -i "tty"</code></li>
-        <li><code>ls /dev/tty*</code></li>
-    </ul>
-    <p>Detected serial devices:</p>
-    <ul>
-        <li><code>/dev/ttyAMA1</code>, <code>/dev/ttyAMA2</code>, <code>/dev/ttyAMA3</code>, and others.</li>
-        <li><code>/dev/ttyS0</code> is enabled as a console interface.</li>
-    </ul>
+        <section>
+            <h2>6. GPIO Interfaces</h2>
+            <p><strong>Command:</strong> <code>ls /sys/class/gpio/</code></p>
+            <p>GPIO pins:</p>
+            <ul>
+                <li><code>gpio578</code> and <code>gpio579</code></li>
+                <li><code>gpiochip512</code> and <code>gpiochip578</code></li>
+            </ul>
+        </section>
 
-    <h2>6. GPIO Interfaces</h2>
-    <p><strong>Command:</strong> <code>ls /sys/class/gpio/</code></p>
-    <p>GPIO pins:</p>
-    <ul>
-        <li><code>gpio578</code> and <code>gpio579</code></li>
-        <li><code>gpiochip512</code> and <code>gpiochip578</code></li>
-    </ul>
+        <section>
+            <h2>7. I2C Interfaces</h2>
+            <p><strong>Command:</strong> <code>i2cdetect -y 1</code></p>
+            <p>Detected I2C device at address <code>0x60</code>.</p>
+        </section>
 
-    <h2>7. I2C Interfaces</h2>
-    <p><strong>Command:</strong> <code>i2cdetect -y 1</code></p>
-    <p>Detected I2C device at address <code>0x60</code>.</p>
+        <section>
+            <h2>8. Bluetooth</h2>
+            <p><strong>Command:</strong> <code>bluetoothctl show</code></p>
+            <p>Bluetooth is enabled with multiple profiles:</p>
+            <ul>
+                <li>Audio Sink and Source.</li>
+                <li>Handsfree Gateway.</li>
+                <li>Device Information.</li>
+            </ul>
+        </section>
 
-    <h2>8. Bluetooth</h2>
-    <p><strong>Command:</strong> <code>bluetoothctl show</code></p>
-    <p>Bluetooth is enabled with multiple profiles:</p>
-    <ul>
-        <li>Audio Sink and Source.</li>
-        <li>Handsfree Gateway.</li>
-        <li>Device Information.</li>
-    </ul>
+        <section>
+            <h2>9. SPI Interfaces</h2>
+            <p><strong>Command:</strong> <code>ls /dev/spidev*</code></p>
+            <p>Detected SPI device:</p>
+            <ul>
+                <li><code>/dev/spidev0.1</code></li>
+            </ul>
+        </section>
 
-    <h2>9. SPI Interfaces</h2>
-    <p><strong>Command:</strong> <code>ls /dev/spidev*</code></p>
-    <p>Detected SPI device:</p>
-    <ul>
-        <li><code>/dev/spidev0.1</code></li>
-    </ul>
+        <section>
+            <h2>10. Comprehensive Hardware Overview</h2>
+            <p><strong>Command:</strong> <code>sudo lshw</code></p>
+            <p>Key details:</p>
+            <ul>
+                <li>Product: Raspberry Pi Compute Module 4 Rev 1.1.</li>
+                <li>CPU: Quad-core ARM Cortex-A72 at 1500MHz.</li>
+                <li>Memory: 4GB.</li>
+                <li>Network: Gigabit Ethernet and Fast Ethernet.</li>
+                <li>Bluetooth and WiFi via Broadcom 43430 chipset.</li>
+                <li>Audio and video output via HDMI and vc4drmfb driver.</li>
+            </ul>
+        </section>
 
-    <h2>10. Comprehensive Hardware Overview</h2>
-    <p><strong>Command:</strong> <code>sudo lshw</code></p>
-    <p>Key details:</p>
-    <ul>
-        <li>Product: Raspberry Pi Compute Module 4 Rev 1.1.</li>
-        <li>CPU: Quad-core ARM Cortex-A72 at 1500MHz.</li>
-        <li>Memory: 4GB.</li>
-        <li>Network: Gigabit Ethernet and Fast Ethernet.</li>
-        <li>Bluetooth and WiFi via Broadcom 43430 chipset.</li>
-        <li>Audio and video output via HDMI and vc4drmfb driver.</li>
-    </ul>
-
-    <h2>Conclusion</h2>
-    <p>This document outlines the detected communication and hardware interfaces on the reComputer. Further configurations and optimizations can be built upon these findings.</p>
+        <section>
+            <h2>Conclusion</h2>
+            <p>This document outlines the detected communication and hardware interfaces on the reComputer. Further configurations and optimizations can be built upon these findings.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 reComputer Documentation</p>
+    </footer>
 </body>
 </html>
