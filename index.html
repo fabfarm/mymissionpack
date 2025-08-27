@@ -4,33 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission Pack Documentation</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fabfarm-modern.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b5cf6'%3E%3Cpath d='M9 12L11 14L15 10M21 12A9 9 0 1 1 3 12A9 9 0 0 1 21 12Z'/%3E%3C/svg%3E">
 </head>
 <body>
     <header>
-        <h1>Seeed Studio Mission Pack - Documentation</h1>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">🎯 Mission Pack</a>
+                <nav class="nav">
+                    <div class="nav-toggle" onclick="toggleMobileNav()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-list" id="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="interfaces.html" class="nav-link">Interfaces</a></li>
+                        <li><a href="general.html" class="nav-link">General Info</a></li>
+                        <li><a href="todo.html" class="nav-link">Todo</a></li>
+                        <li><a href="http://fab.lan" class="nav-link">FabFarm</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
+
     <main>
-        <p>Welcome to the documentation hub for the Seeed Studio Mission Pack, deployed on the <strong>Algarve FabFarm</strong> infrastructure. This documentation serves as a detailed guide to understanding, configuring, and utilizing the services and tools provided within the Mission Pack.</p>
-        <p>The Hazard Response Mission Pack is an open-source AIoT solution designed to efficiently manage and mitigate hazard scenarios. This compact system combines a range of technologies, including sensor networks and edge computing, to enable effective remote sensing, data transmission, processing, inference, and analysis. For more detailed information about the Hazard Response Mission Pack, please refer to the <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" target="_blank">official GitHub repository</a>.</p>
-        <p>Below, you'll find links to detailed documentation for each service included in the Mission Pack:</p>
-        <ul>
-            <li><a href="interfaces.html">Interfaces and Communication</a> - Overview of hardware and network interfaces.</li>
-            <li><a href="ssh_server.html">SSH Server</a> - Securely access the server terminal remotely.</li>
-            <li><a href="cups_scheduler.html">CUPS Scheduler</a> - Manage and configure print jobs.</li>
-            <li><a href="node_red.html">Node-RED</a> - Visual programming for IoT workflows.</li>
-            <li><a href="mqtt_broker.html">MQTT Broker</a> - Message broker for IoT communication.</li>
-            <li><a href="postgresql.html">PostgreSQL Database</a> - Database for data storage and management.</li>
-            <li><a href="lora_gateway.html">LoRa Gateway Bridge</a> - Connect LoRa devices to the network.</li>
-            <li><a href="chirpstack.html">ChirpStack Application Server</a> - Manage LoRaWAN networks and applications.</li>
-            <li><a href="mediamtx.html">Media Server</a> - Stream and manage media files.</li>
-            <li><a href="supervisor.html">Supervisor Service</a> - Monitor and control server processes.</li>
-            <li><a href="general.html">General Information</a> - Overview of the Mission Pack and its components.</li>
-            <li><a href="todo.html">To do</a> - List of tasks to be completed.</li>
-        </ul>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="section">
+                <div class="section-header animate-fade-in-up">
+                    <h1 class="section-title">Seeed Studio Mission Pack</h1>
+                    <p class="section-subtitle">
+                        Comprehensive documentation for the Hazard Response Mission Pack deployed on 
+                        Algarve FabFarm infrastructure. An open-source AIoT solution for efficient 
+                        hazard management and mitigation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Introduction -->
+            <section class="section">
+                <div class="card animate-fade-in">
+                    <div class="card-header">
+                        <h2 class="card-title">🚀 About the Mission Pack</h2>
+                        <p class="card-description">
+                            The Hazard Response Mission Pack is a cutting-edge AIoT solution that combines 
+                            sensor networks, edge computing, and advanced analytics to enable effective 
+                            remote sensing, data transmission, processing, and real-time hazard analysis.
+                        </p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Seeed-Studio/Hazard-Response-Mission-Pack" 
+                           target="_blank" class="btn btn-primary">
+                            📚 GitHub Repository
+                        </a>
+                        <a href="general.html" class="btn btn-secondary">
+                            📋 General Information
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Core Services -->
+            <section class="section">
+                <h2 class="section-title">Core Services & Components</h2>
+                <div class="grid grid-cols-3">
+                    <div class="card animate-fade-in">
+                        <div class="card-header">
+                            <h3 class="card-title">🔗 System Interfaces</h3>
+                            <p class="card-description">
+                                Hardware and network interface documentation, communication protocols, and connectivity options.
+                            </p>
+                        </div>
+                        <a href="interfaces.html" class="btn btn-secondary">View Interfaces</a>
+                    </div>
+
+                    <div class="card animate-fade-in" style="animation-delay: 0.1s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🔒 SSH Server</h3>
+                            <p class="card-description">
+                                Secure remote terminal access configuration, authentication, and connection management.
+                            </p>
+                        </div>
+                        <a href="ssh_server.html" class="btn btn-secondary">SSH Documentation</a>
+                    </div>
+
+                    <div class="card animate-fade-in" style="animation-delay: 0.2s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🖨️ CUPS Scheduler</h3>
+                            <p class="card-description">
+                                Print job management, scheduler configuration, and printer service administration.
+                            </p>
+                        </div>
+                        <a href="cups_scheduler.html" class="btn btn-secondary">CUPS Guide</a>
+                    </div>
+
+                    <div class="card animate-fade-in" style="animation-delay: 0.3s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🔄 Node-RED</h3>
+                            <p class="card-description">
+                                Visual programming environment for IoT workflows, automation, and data processing.
+                            </p>
+                        </div>
+                        <a href="node_red.html" class="btn btn-secondary">Node-RED Setup</a>
+                    </div>
+
+                    <div class="card animate-fade-in" style="animation-delay: 0.4s;">
+                        <div class="card-header">
+                            <h3 class="card-title">📡 MQTT Broker</h3>
+                            <p class="card-description">
+                                Message broker configuration for IoT device communication and data exchange protocols.
+                            </p>
+                        </div>
+                        <a href="mqtt_broker.html" class="btn btn-secondary">MQTT Configuration</a>
+                    </div>
+
+                    <div class="card animate-fade-in" style="animation-delay: 0.5s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🗃️ PostgreSQL Database</h3>
+                            <p class="card-description">
+                                Database setup, management, data storage solutions, and query optimization.
+                            </p>
+                        </div>
+                        <a href="postgresql.html" class="btn btn-secondary">Database Guide</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Communication & Media -->
+            <section class="section">
+                <h2 class="section-title">Communication & Media Services</h2>
+                <div class="grid grid-cols-2">
+                    <div class="card animate-slide-in">
+                        <div class="card-header">
+                            <h3 class="card-title">📶 LoRa Gateway Bridge</h3>
+                            <p class="card-description">
+                                Long-range radio communication gateway for connecting LoRa devices to the network infrastructure.
+                            </p>
+                        </div>
+                        <a href="lora_gateway.html" class="btn btn-accent">LoRa Configuration</a>
+                    </div>
+
+                    <div class="card animate-slide-in" style="animation-delay: 0.1s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🌐 ChirpStack Server</h3>
+                            <p class="card-description">
+                                LoRaWAN network server for managing applications, devices, and network infrastructure.
+                            </p>
+                        </div>
+                        <a href="chirpstack.html" class="btn btn-accent">ChirpStack Setup</a>
+                    </div>
+
+                    <div class="card animate-slide-in" style="animation-delay: 0.2s;">
+                        <div class="card-header">
+                            <h3 class="card-title">🎬 Media Server</h3>
+                            <p class="card-description">
+                                MediaMTX server for streaming, media file management, and real-time content delivery.
+                            </p>
+                        </div>
+                        <a href="mediamtx.html" class="btn btn-accent">Media Configuration</a>
+                    </div>
+
+                    <div class="card animate-slide-in" style="animation-delay: 0.3s;">
+                        <div class="card-header">
+                            <h3 class="card-title">⚙️ Supervisor Service</h3>
+                            <p class="card-description">
+                                Process monitoring, automatic restart configuration, and system service management.
+                            </p>
+                        </div>
+                        <a href="supervisor.html" class="btn btn-accent">Supervisor Guide</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Resources -->
+            <section class="section">
+                <h2 class="section-title">Additional Resources</h2>
+                <div class="grid grid-cols-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📋 Project Management</h3>
+                            <p class="card-description">
+                                Track progress, manage tasks, and coordinate development activities.
+                            </p>
+                        </div>
+                        <a href="todo.html" class="btn btn-primary">View Todo List</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🌾 FabFarm Integration</h3>
+                            <p class="card-description">
+                                Access the main FabFarm infrastructure and related services.
+                            </p>
+                        </div>
+                        <a href="http://fab.lan" class="btn btn-primary">Visit FabFarm</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="section">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h3 class="card-title">📞 Support & Contact</h3>
+                        <p class="card-description">
+                            Need assistance or have questions about the Mission Pack implementation?
+                        </p>
+                    </div>
+                    <div class="flex justify-center gap-4">
+                        <a href="mailto:info@fabfarm.org" class="btn btn-secondary">
+                            ✉️ Contact Support
+                        </a>
+                        <a href="https://www.seeedstudio.com" target="_blank" class="btn btn-accent">
+                            🌐 Seeed Studio
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
     <footer>
-        <p>This documentation is maintained by Algarve FabFarm. For more details, visit <a href="https://www.seeedstudio.com" target="_blank">Seeed Studio</a> or contact <a href="mailto:info@fabfarm.org">info@fabfarm.org</a>.</p>
-        <p>&copy; 2024 My Mission Pack</p></footer>
+        <div class="footer-content">
+            <p>
+                Documentation maintained by <strong>Algarve FabFarm</strong> | 
+                For more details, visit <a href="https://www.seeedstudio.com" target="_blank">Seeed Studio</a>
+            </p>
+            <p>&copy; 2025 Mission Pack Documentation - Powered by Modern Web Technologies</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileNav() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('active');
+        }
+
+        // Intersection Observer for animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards for animation
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+    </script>
 </body>
 </html>

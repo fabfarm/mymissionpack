@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>reComputer Interfaces and Communication Walkthrough</title>
+    <title>recomputer Interfaces</title>
 </head>
 <body>
     <header>
-        <h1>recomputer Interfaces and Communication Walkthrough</h1>
+        <h1>reComputer Interfaces and Communication Walkthrough</h1>
     </header>
     <main>
         <section>
@@ -47,8 +47,14 @@
             <p><strong>Command:</strong> <code>ip link show</code></p>
             <p>Available network interfaces:</p>
             <ul>
-                <li><strong>eth0:</strong> Ethernet interface with a MAC address of <code>hidden</code>.</li>
-                <li><strong>eth1:</strong> Ethernet interface via USB hub with a MAC address of <code>hidden</code>.</li>
+                <li><strong>eth0:</strong> Ethernet interface with a MAC address of <code>hidden</code> and an IP address of <code>192.168.1.171</code>.</li>
+                <li>
+                    <p><strong>GL.inet WiFi Router GL-SFT1200 attached to eth0</strong><br>
+                    Accessible via web browser at <a href="http://192.168.100.1/" target="_blank">http://192.168.100.1/</a>.<br>
+                    <strong>Default Username:</strong> Not required<br>
+                    <strong>Default Password:</strong> Not required<br>
+                </li>
+                <li><strong>eth1:</strong> Ethernet interface via USB hub with a MAC address of <code>hidden</code> and an IP address of <code>192.168.100.10</code>.</li>
                 <li><strong>wlan0:</strong> Wireless interface, currently down.</li>
                 <li>Multiple Docker and bridge interfaces.</li>
             </ul>
@@ -105,7 +111,17 @@
         </section>
 
         <section>
-            <h2>10. Comprehensive Hardware Overview</h2>
+            <h2>10. LoRa Gateway Bridge</h2>
+            <p>The LoRa Gateway Bridge facilitates communication between LoRaWAN devices and the ChirpStack network server. It is likely running within a Docker container.</p>
+            <ul>
+                <li><strong>Host:</strong> <code>reComputer-R100x.local</code></li>
+                <li><strong>Port:</strong> <code>1700</code></li>
+            </ul>
+            <p>This setup is typically configured via ChirpStack or a similar LoRaWAN platform for communication and device management.</p>
+        </section>
+
+        <section>
+            <h2>11. Comprehensive Hardware Overview</h2>
             <p><strong>Command:</strong> <code>sudo lshw</code></p>
             <p>Key details:</p>
             <ul>
@@ -124,7 +140,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 My Mission Pack</p>
+        <p>&copy; 2024 reComputer Documentation</p>
     </footer>
 </body>
 </html>
